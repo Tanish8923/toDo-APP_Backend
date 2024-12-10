@@ -13,7 +13,7 @@ exports.updateTodo = async(req,res) => {
             title , 
             description , 
             updatedAt : Date.now(),
-        })
+        } , {new : true})
 
         if (!response) {
             return res.status(404).json({
